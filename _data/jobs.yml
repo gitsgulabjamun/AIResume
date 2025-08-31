@@ -1,5 +1,91 @@
-- company: Sample
-  title: Title
-  period: 2020–Now
-  tags: [AI]
-  highlights: [Example]
+- company: CleverTap
+  title: Associate Director, Technical Documentation
+  period: Jun 2021 – Present · Mumbai
+  tags: [AI, Automation, OKR, Leadership, API, Adoption]
+  highlights:
+    - Automated API reference and support KB using AI pipelines → ~40% less manual effort.
+    - Analytics loop mapped doc quality to support tickets → ~25% fewer inbound tickets.
+    - Built AI-assisted adoption Recipes improving onboarding and retention.
+    - Established AI-based style-guide automation; documented tribal knowledge.
+    - Led OKRs, quarterly reviews, and continuous upskilling for the documentation org.
+
+- company: CleverTap
+  title: Team Lead / Senior Manager
+  period: Jul 2019 – Jun 2021 · Mumbai
+  tags: [AI, Leadership, Jira, Grammarly, Process, Throughput]
+  highlights:
+    - Conducted a documentation hackathon; prototyped AI-driven discovery/search.
+    - Audit of developer docs cut integration tickets by ~75%.
+    - Automated link-error reporting & Jira creation; Grammarly AI for tone/voice.
+    - Introduced sprint-lane planning and promoted talent into leadership.
+    - Launched FAQs that reduced repeat issues ~25%.
+
+- company: Freelance
+  title: Writer / Trainer
+  period: Nov 2018 – Jul 2019 · Mumbai / Kawasaki, Japan
+  tags: [Training, Writing, Standards]
+  highlights:
+    - Trained engineering staff at Mitsubishi Fuso Motors on technical report writing.
+    - Delivered documentation projects across multiple domains.
+
+- company: SmartStream Technologies
+  title: Senior Technical Writer
+  period: Apr 2014 – Nov 2018 · Mumbai
+  tags: [Agile, Style guide, Fintech, Hadoop, Spark]
+  highlights:
+    - Pioneered Agile Writing; embedded docs into sprint cycles.
+    - Standardized documentation across financial products.
+    - Upgraded and enforced style guide for usability and scale.
+    - Worked with TechOps on install guides for Hadoop, Hive, Spark.
+
+- company: Amdocs
+  title: Senior Technical Writer
+  period: Nov 2010 – Apr 2014
+  tags: [MVP, Enterprise, Global]
+  highlights:
+    - MVP cash award for delivery under high-pressure escalations.
+    - Coordinated global teams; shipped patch-bundle documentation.
+    - Peer edits and structured reviews to raise quality bar.
+
+- company: Rolta India
+  title: Senior Technical Writer (Associate Manager)
+  period: Apr 2009 – Nov 2010 · Mumbai
+  tags: [Leadership, GIS, Templates, Training]
+  highlights:
+    - Led two junior writers; handled performance reviews and reporting.
+    - Recognized by Canadian dev team as best writer; ₹50K award.
+    - Planned flows/templates; authored user and training manuals; process docs for GIS & satellite imaging.
+
+- company: Nexvisionix
+  title: Senior Technical Writer
+  period: May 2007 – Apr 2009 · Mumbai
+  tags: [Leadership, Embedded, Media, Retail, Exec comms]
+  highlights:
+    - Managed junior and outsourced writers; set timelines and allocations.
+    - Authored technical and marketing content across embedded, media, and retail.
+    - Promoted to ghost-write thought leadership for CEO/CXO.
+
+- company: Symtrax Softwares
+  title: Technical Writer
+  period: Jul 2006 – May 2007 · Mumbai
+  tags: [Localization, SAP, IBM i, Operations]
+  highlights:
+    - Created technical docs across products; localized German, Spanish, French.
+    - Coordinated with translation partners; SAP/IBM i-series billing docs.
+    - Helped set up leased-office infrastructure and processes.
+
+- company: Coalition Development
+  title: Analyst
+  period: May 2005 – May 2006 · Mumbai
+  tags: [Analysis, Strategy, London]
+  highlights:
+    - Delivered market intelligence and strategy reports.
+    - Promoted to interface directly with the London team.
+
+- company: Stream Tracmail
+  title: Technical Support Engineer
+  period: Jul 2001 – Nov 2003
+  tags: [Support, Documentation, Processes]
+  highlights:
+    - Created standardized troubleshooting content used org-wide.
+    - Acted as second-line escalation; streamlined client processes.
