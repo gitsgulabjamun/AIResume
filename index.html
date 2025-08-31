@@ -1,3 +1,4 @@
+```html
 ---
 layout: default
 title: Home
@@ -9,26 +10,59 @@ title: Home
 
 <style>
 :root { --brand:#375dfb; --accent:#10b981; }
-body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+* { box-sizing: border-box; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background:#ffffff; color:#111827; transition: background .3s ease, color .3s ease; }
 .container-lg { max-width: 1100px !important; }
+hr { border:0; height:1px; background: #e5e7eb; margin: 28px 0; }
+
 .hero { display:grid; grid-template-columns: .9fr 1.1fr; gap:22px; align-items:center; }
 .hero .photo { width:min(280px, 84%); aspect-ratio:1/1; border-radius:18px; object-fit:cover; border: 2px solid rgba(0,0,0,.06); box-shadow: 0 18px 40px rgba(0,0,0,.12); }
+
 .chips { display:flex; gap:8px; flex-wrap:wrap; margin:10px 0 0; }
 .chip { background:#eef2ff; color:#334155; border:1px solid #e2e8f0; padding:6px 10px; border-radius:999px; font-size:13px; }
-.btn-primary { background: linear-gradient(120deg, var(--brand), var(--accent)); border:none; }
+
+.btn { display:inline-flex; align-items:center; gap:6px; padding:8px 14px; border-radius:8px; border:1px solid #e5e7eb; background:#fff; color:#111; text-decoration:none; cursor:pointer; transition: background .2s, color .2s, border-color .2s, transform .05s; }
+.btn:hover { background:#f1f5f9; }
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: linear-gradient(120deg, var(--brand), var(--accent)); border:none; color:#fff; }
+
 .metric-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; margin-top:14px; }
 .metric { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:12px; text-align:center; }
 .metric .num { font-weight:800; font-size:26px; }
 .metric .label { font-size:12px; color:#64748b; }
-/* Visible theme button in both modes */
+
+/* Theme button */
 #themeToggle { color:#111 !important; background:#fff; border:1px solid #e2e8f0; }
-.dark #themeToggle { color:#fff !important; background:#0f172a; border-color:#334155; }
-.search { width:100%; padding:12px 14px; border-radius:10px; border:1px solid #e5e7eb; }
+
+/* Search input */
+.search { width:100%; padding:12px 14px; border-radius:10px; border:1px solid #e5e7eb; background:#fff; transition: background .2s, color .2s, border-color .2s; }
+
+/* Timeline and cards */
 .timeline::before { content:''; position:absolute; left:9px; top:0; bottom:0; width:2px; background: linear-gradient(#a5b4fc, #34d399); opacity:.4; }
 .job { position: relative; margin: 8px 0 14px 24px; }
 .job::before { content:''; position:absolute; left:-23px; top:6px; width:12px; height:12px; border-radius:50%; background: #6366f1; box-shadow: 0 0 0 4px rgba(99,102,241,.15); }
 .tag { background:#f1f5f9; border:1px solid #e2e8f0; color:#334155; border-radius:8px; padding:2px 8px; font-size:12px; display:inline-block; margin-right:6px; }
+
+/* Footer */
 footer.site-footer { text-align:center; color:#64748b; }
+
+/* ------------------------------ */
+/* Dark mode overrides            */
+/* ------------------------------ */
+.dark body { background:#0f172a; color:#e2e8f0; }
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 { color:#f1f5f9; }
+.dark hr { background:#334155; }
+
+.dark nav { background:#1e293b; border-bottom:1px solid #334155; padding:10px; border-radius:8px; }
+.dark .btn { background:#1e293b; border-color:#334155; color:#e2e8f0; }
+.dark .btn:hover { background:#334155; }
+.dark .btn-primary { background: linear-gradient(120deg, #60a5fa, #10b981); color:#fff; }
+.dark #themeToggle { color:#fff !important; background:#0f172a; border-color:#334155; }
+
+.dark .chip { background:#1e293b; color:#e2e8f0; border-color:#334155; }
+.dark .metric { background:#1e293b; border-color:#334155; }
+.dark .tag { background:#1e293b; border-color:#334155; color:#e2e8f0; }
+.dark .search { background:#1e293b; border-color:#334155; color:#e2e8f0; }
 </style>
 
 <div class="container-lg px-3 my-5 markdown-body">
@@ -43,31 +77,48 @@ footer.site-footer { text-align:center; color:#64748b; }
   </nav>
 
   <section class="hero">
-    <div class="photo-wrap"><img src="{{ '/assets/img/sunil.jpg' | relative_url }}" alt="Photo of Sunil Jadhav" class="photo"></div>
+    <div class="photo-wrap">
+      <img src="{{ '/assets/img/sunil.jpg' | relative_url }}" alt="Photo of Sunil Jadhav" class="photo">
+    </div>
     <div>
       <p class="lead" style="margin:0;color:#64748b;">Associate Director, Documentation | Content Strategy | AI for Docs — Mumbai, India</p>
       <h1 style="margin-top:4px;">AI-driven documentation leader who ships clarity, adoption, and measurable impact.</h1>
       <p style="color:#334155">I use automation and analytics to transform technical writing, cut support costs, and scale teams. Partner to Product, Engineering, and Design across US/UK/EU/Japan.</p>
+
       <div class="chips">
-        <span class="chip">AI for Docs</span><span class="chip">API & Developer Docs</span>
-        <span class="chip">Team Leadership</span><span class="chip">OKRs & Performance</span>
-        <span class="chip">Content Strategy</span><span class="chip">Onboarding & Adoption</span>
+        <span class="chip">AI for Docs</span>
+        <span class="chip">API & Developer Docs</span>
+        <span class="chip">Team Leadership</span>
+        <span class="chip">OKRs & Performance</span>
+        <span class="chip">Content Strategy</span>
+        <span class="chip">Onboarding & Adoption</span>
       </div>
+
       <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;align-items:center;">
         <a href="#experience" class="btn btn-primary">View Work Experience</a>
         <a href="mailto:write2sunil@gmail.com" class="btn">📧 Email</a>
         <a href="https://www.linkedin.com/in/sunil-jadhav-76b90a9" target="_blank" rel="noopener noreferrer" class="btn">🔗 LinkedIn: linkedin.com/in/sunil-jadhav-76b90a9</a>
         <button class="btn" onclick="window.print()">🖨 Print / Save PDF</button>
       </div>
+
       <div class="metric-grid">
-        <div class="metric"><div id="m-years" class="num">0</div><div class="label">Years in Docs</div></div>
-        <div class="metric"><div id="m-saved" class="num">$0</div><div class="label">Annual Savings</div></div>
-        <div class="metric"><div id="m-tix" class="num">0%</div><div class="label">Ticket Reduction</div></div>
+        <div class="metric">
+          <div id="m-years" class="num">0</div>
+          <div class="label">Years in Docs</div>
+        </div>
+        <div class="metric">
+          <div id="m-saved" class="num">$0</div>
+          <div class="label">Annual Savings</div>
+        </div>
+        <div class="metric">
+          <div id="m-tix" class="num">0%</div>
+          <div class="label">Ticket Reduction</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <hr/>
+  <hr>
 
   <section id="experience">
     <h2>Experience</h2>
@@ -104,36 +155,37 @@ footer.site-footer { text-align:center; color:#64748b; }
 
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script>
-// Theme toggle
+// Persisted theme on load
 (function(){
-  const btn=document.getElementById('themeToggle');
-  const root=document.documentElement;
-  const saved=localStorage.getItem('theme');
-  if(saved==='dark') root.classList.add('dark');
-  if(saved==='light') root.classList.remove('dark');
-  btn.addEventListener('click',()=>{
+  const btn = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark') root.classList.add('dark');
+  if (saved === 'light') root.classList.remove('dark');
+
+  btn.addEventListener('click', () => {
     root.classList.toggle('dark');
-    localStorage.setItem('theme', root.classList.contains('dark') ? 'dark':'light');
+    localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
   });
 })();
 
-// Metrics animations
-function animateValue(el,start,end,duration,formatter=(v)=>v){
-  const t0=performance.now();
-  function frame(now){
-    const p=Math.min((now-t0)/duration,1);
-    const v=start+(end-start)*p;
-    el.textContent=formatter(p===1?end:v);
-    if(p<1) requestAnimationFrame(frame);
+// Metric animations
+function animateValue(el, start, end, duration, formatter = (v)=>v) {
+  const t0 = performance.now();
+  function frame(now) {
+    const p = Math.min((now - t0) / duration, 1);
+    const v = start + (end - start) * p;
+    el.textContent = formatter(p === 1 ? end : v);
+    if (p < 1) requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
 }
-animateValue(document.getElementById('m-years'),0,20,900,v=>Math.round(v));
-animateValue(document.getElementById('m-saved'),0,44208,900,v=>'$'+Math.round(v).toLocaleString());
-animateValue(document.getElementById('m-tix'),0,25,900,v=>Math.round(v)+'%');
+animateValue(document.getElementById('m-years'), 0, 20, 900, v => Math.round(v));
+animateValue(document.getElementById('m-saved'), 0, 44208, 900, v => '$' + Math.round(v).toLocaleString());
+animateValue(document.getElementById('m-tix'), 0, 25, 900, v => Math.round(v) + '%');
 
 // Build jobs from data and Lunr index
-const jobs=[
+const jobs = [
   {% for j in site.data.jobs %}{
     "company":"{{ j.company | escape }}",
     "title":"{{ j.title | escape }}",
@@ -143,44 +195,49 @@ const jobs=[
   }{% unless forloop.last %}, {% endunless %}{% endfor %}
 ];
 
-const idx=lunr(function(){
+const idx = lunr(function () {
   this.ref('id');
   this.field('company'); this.field('title'); this.field('period'); this.field('tags'); this.field('highlights');
-  jobs.forEach((j,i)=>this.add({
-    id:i,
-    company:j.company,
-    title:j.title,
-    period:j.period,
-    tags:j.tags.join(' '),
-    highlights:j.highlights.join(' ')
+  jobs.forEach((j, i) => this.add({
+    id: i,
+    company: j.company,
+    title: j.title,
+    period: j.period,
+    tags: j.tags.join(' '),
+    highlights: j.highlights.join(' ')
   }));
 });
 
-function render(list){
-  const el=document.getElementById('timeline'); el.innerHTML='';
-  list.forEach((j,i)=>{
-    const card=document.createElement('article'); card.className='job';
-    card.innerHTML=`
+function render(list) {
+  const el = document.getElementById('timeline');
+  el.innerHTML = '';
+  list.forEach((j, i) => {
+    const card = document.createElement('article');
+    card.className = 'job';
+    card.innerHTML = `
       <h3><strong>${j.company}</strong> — ${j.title}</h3>
       <div class="meta" style="color:#64748b;">${j.period}</div>
-      <details ${list.length===jobs.length && i===0 ? 'open' : ''}>
+      <details ${list.length === jobs.length && i===0 ? 'open' : ''}>
         <summary><strong>Highlights</strong></summary>
-        <ul style="margin-top:8px;">${j.highlights.map(h=>`<li>${h}</li>`).join('')}</ul>
+        <ul style="margin-top:8px;">${j.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
       </details>
-      <div style="margin-top:8px;">${j.tags.map(t=>`<span class='tag'>${t}</span>`).join(' ')}</div>
+      <div style="margin-top:8px;">${j.tags.map(t => `<span class='tag'>${t}</span>`).join(' ')}</div>
     `;
     el.appendChild(card);
   });
-  document.getElementById('count').textContent = (list.length===jobs.length)
-    ? `Showing all ${jobs.length} roles`
-    : `Showing ${list.length} of ${jobs.length} roles`;
+  document.getElementById('count').textContent =
+    (list.length === jobs.length)
+      ? `Showing all ${jobs.length} roles`
+      : `Showing ${list.length} of ${jobs.length} roles`;
 }
 render(jobs);
 
-document.getElementById('search').addEventListener('input',(e)=>{
-  const q=e.target.value.trim();
-  if(!q) return render(jobs);
-  const res=idx.search(q).map(r=>jobs[r.ref]);
+// Search interaction
+document.getElementById('search').addEventListener('input', (e) => {
+  const q = e.target.value.trim();
+  if (!q) return render(jobs);
+  const res = idx.search(q).map(r => jobs[r.ref]);
   render(res);
 });
 </script>
+```
